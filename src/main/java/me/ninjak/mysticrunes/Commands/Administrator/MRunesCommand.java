@@ -3,7 +3,7 @@ package me.ninjak.mysticrunes.Commands.Administrator;
 import me.ninjak.mysticrunes.FilesManager.ConfigManager;
 import me.ninjak.mysticrunes.GUI.RunesInv;
 import me.ninjak.mysticrunes.MysticRunes;
-import me.ninjak.mysticrunes.RunesAnvil.RunesAnvil;
+import me.ninjak.mysticrunes.Items.RunesAnvil.RunesAnvil;
 import me.ninjak.mysticrunes.Utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;

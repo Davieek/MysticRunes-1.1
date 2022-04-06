@@ -1,4 +1,4 @@
-package me.ninjak.mysticrunes.RunesAnvil;
+package me.ninjak.mysticrunes.Items.RunesAnvil;
 
 import me.ninjak.mysticrunes.Utils.Utils;
 import org.bukkit.Material;

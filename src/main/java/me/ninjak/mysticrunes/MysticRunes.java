@@ -12,7 +12,7 @@ import me.ninjak.mysticrunes.GUI.ItemsOnGui.GlassList;
 import me.ninjak.mysticrunes.GUI.ItemsOnGui.ToolsList;
 import me.ninjak.mysticrunes.MobsItem.LoadMobsDrop;
 import me.ninjak.mysticrunes.Runes.LoadRunes;
-import me.ninjak.mysticrunes.RunesAnvil.RunesAnvil;
+import me.ninjak.mysticrunes.Items.RunesAnvil.RunesAnvil;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
