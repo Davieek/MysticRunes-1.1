@@ -31,7 +31,7 @@ public class MRunesCommand implements CommandExecutor {
         if (!(sender instanceof Player)) {
             var console = Bukkit.getConsoleSender();
             console.sendMessage(Utils.fixColor("&8(&dM&8) &cconsole not execute this command"));
-            console.sendMessage(Utils.fixColor("&8(&dM&8) &cconsole not execute this command"));
+            System.out.println("test");
             return true;
         }
 
