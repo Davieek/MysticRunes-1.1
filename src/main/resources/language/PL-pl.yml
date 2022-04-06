@@ -1,0 +1,23 @@
+#######               #######
+########             ########
+#########           #########
+##########         ##########
+###########       ###########
+############     ############
+###### ######   ###### ######        Mystic Runes
+######  ###### ######  ######
+######   ###########   ######     Plugin Version: 1.1
+######     #######     ######       Author: _Ninjak
+######                 ######
+######                 ######
+######                 ######
+######                 ######
+######                 ######
+GUI:
+  pickaxeNameRunesGUI: "&aKliknij aby zobaczyć wszystkie runy na kilof"
+  axeNameRunesGUI: "&aKliknij aby zobaczyć wszystkie runy na siekiere"
+  swordNameRunesGUI: "&aKliknij aby zobaczyć wszystkie runy na miecze"
+  armorNameRunesGUI: "&aKliknij aby zobaczyć wszystkie runy na zbroje"
+  mobsDropNameRunesGUI: "&aKliknij aby zobaczyć wszystkie Dropy z mobow"
+playerNotPermissions: "&cNie masz permisji."
+reloadConfigMessage: "&aconfig reload."

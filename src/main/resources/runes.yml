@@ -1,0 +1,38 @@
+#######               #######
+########             ########
+#########           #########
+##########         ##########
+###########       ###########
+############     ############
+###### ######   ###### ######        Mystic Runes
+######  ###### ######  ######
+######   ###########   ######     Plugin Version: 1.1
+######     #######     ######       Author: _Ninjak
+######                 ######
+######                 ######
+######                 ######
+######                 ######
+######                 ######
+
+
+Runes:
+  smelting:
+    enableRune: true
+    rarity: "&7COMMON"
+    name: ""
+    lore:
+      - ""
+      - ""
+      - ""
+    ChangeDrop: 0
+    MobDrop:
+      zombie: true
+      slime: true
+      skeleton: true
+      magmacream: true
+      spider: true
+      creeper: true
+
+
+
+

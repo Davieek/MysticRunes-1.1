@@ -1,0 +1,10 @@
+name: MysticRunes
+version: '${project.version}'
+main: me.ninjak.mysticrunes.MysticRunes
+api-version: 1.18
+authors: [ _Ninjak ]
+
+commands:
+  mrunes:
+    description: all runes inventory
+    aliases: [nr]
