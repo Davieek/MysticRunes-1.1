@@ -30,38 +30,17 @@ public class BlockPlaceListener implements Listener {
         if (event.getBlockPlaced().getType() == Material.END_PORTAL_FRAME) {
             if (player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equalsIgnoreCase(Utils.fixColor("&d• Runiczny Piedestał"))) {
                 var block = event.getBlock();
-//                ArmorStand stand = player.getLocation().getWorld().spawn(new Location(block.getWorld(), block.getX()+0.5, block.getY()-0.2, block.getZ()+0.7), ArmorStand.class);
-//                ItemStack head = new ItemStack(Material.MAGMA_CREAM, 1);
-//                stand.setHelmet(head);
-//                stand.setSmall(true);
-//                stand.setGravity(false);
-//                stand.setInvisible(true);
-//                stand.setMarker(true);
 
-                var test = player.getWorld().dropItem(new Location(block.getWorld(), block.getX()+0.5, block.getY()+0.85, block.getZ()+0.5),RunesAnvil.AnvilItem);
-                test.setCanMobPickup(false);
-                test.setVelocity(test.getVelocity().zero());
-                test.setGravity(true);
-                test.setOwner(Bukkit.getPlayer("_Ninjak").getUniqueId());
-                test.setWillAge(false);
-                test.setFireTicks(0);
-                test.setCanPlayerPickup(false);
-                test.setCustomNameVisible(true);
-                test.setCustomName(Utils.fixColor("&d• Runiczny Piedestał"));
-//                ArmorStand stand2 = player.getLocation().getWorld().spawn(new Location(block.getWorld(), block.getX()+0.5, block.getY()-0.6, block.getZ()+0.5), ArmorStand.class);
-//                stand2.setInvisible(true);
-//                ItemStack head2 = new ItemStack(Material.GLASS, 1);
-//                stand2.setHelmet(head2);
-//                stand2.setGravity(false);
-//                stand2.setMarker(true);
-//
-//                ArmorStand stand3 = player.getLocation().getWorld().spawn(new Location(block.getWorld(), block.getX()+0.5, block.getY()+0.7, block.getZ()+0.5), ArmorStand.class);
-//                stand3.setGravity(false);
-//                stand3.setInvisible(true);
-//                stand3.setMarker(true);
-//                stand3.setCustomName(Utils.fixColor("&c◆"));
-//                stand3.setCustomNameVisible(true);
-//                player.sendMessage("test");
+                var item = player.getWorld().dropItem(new Location(block.getWorld(), block.getX()+0.5, block.getY()+0.85, block.getZ()+0.5),RunesAnvil.AnvilItem);
+                item.setCanMobPickup(false);
+                item.setVelocity(item.getVelocity().zero());
+                item.setGravity(true);
+                item.setOwner(Bukkit.getPlayer("_Ninjak").getUniqueId());
+                item.setWillAge(false);
+                item.setFireTicks(0);
+                item.setCanPlayerPickup(false);
+                item.setCustomNameVisible(true);
+                item.setCustomName(Utils.fixColor("&c• Runiczny Piedestał"));
             }
         }
     }
@@ -73,11 +52,7 @@ public class BlockPlaceListener implements Listener {
         }
         if (event.getBlock().getType() == Material.END_PORTAL_FRAME) {
             var block = event.getBlock();
-            var test = block.getLocation().getNearbyEntitiesByType(ArmorStand.class, 0.9);
             var test2 = block.getLocation().getNearbyEntities(0.5, 1,0.5);
-//            for (Entity entity : test) {
-//                entity.remove();
-//            }
             for (Entity entity : test2) {
                 if (entity.getType() == EntityType.PLAYER) {
                     return;
