@@ -51,9 +51,9 @@ public final class MysticRunes extends JavaPlugin {
     }
 
     private static void setupFiles() {
+        ConsoleMessage.enableMessage();
         RunicPedestalManager.setup();
         RunicPedestalManager.saveConfig();
-        ConsoleMessage.enableMessage();
         ConfigManager.setup();
         ConfigManager.saveConfig();
         RunesManager.setup();

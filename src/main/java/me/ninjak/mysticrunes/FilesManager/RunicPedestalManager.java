@@ -34,13 +34,13 @@ public class RunicPedestalManager {
             main.getDataFolder().mkdir();
             console.sendMessage(Utils.fixColor("&8(&dM&8) &aSuccess create plugin folder"));
         }
-        runicFile = new File(main.getDataFolder() + "/config.yml");
+        runicFile = new File(main.getDataFolder() + "/players/runicpedestal.yml");
 
 
         // Create config file
         if (!runicFile.exists()) {
             console.sendMessage(Utils.fixColor("&8(&dM&8) &ecreate runic file"));
-            main.saveResource("config.yml", false);
+            main.saveResource("/players/runicpedestal.yml", false);
             console.sendMessage(Utils.fixColor("&8(&dM&8) &aSuccess create runic file"));
         }
         runic = YamlConfiguration.loadConfiguration(runicFile);

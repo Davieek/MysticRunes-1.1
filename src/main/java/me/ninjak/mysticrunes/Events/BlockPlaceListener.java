@@ -1,6 +1,7 @@
 package me.ninjak.mysticrunes.Events;
 
 import jdk.jshell.execution.Util;
+import me.ninjak.mysticrunes.FilesManager.RunicPedestalManager;
 import me.ninjak.mysticrunes.Items.RunesAnvil.RunesAnvil;
 import me.ninjak.mysticrunes.Utils.Utils;
 import org.bukkit.Bukkit;
@@ -41,11 +42,24 @@ public class BlockPlaceListener implements Listener {
                 item.setCanPlayerPickup(false);
                 item.setCustomNameVisible(true);
                 item.setCustomName(Utils.fixColor("&c• Runiczny Piedestał"));
+
+                var playerUUID = player.getUniqueId();
+                var pX = block.getX();
+                var pY = block.getY();
+                var pZ = block.getZ();
+
+                var runic = RunicPedestalManager.runic;
+
+                runic.set(playerUUID + ".pedestal-X" + pX + "Y" + pY + "Z" + pZ, "true");
+
+                RunicPedestalManager.saveConfig();
+
+
             }
         }
     }
     @EventHandler
-    public void onBlockPlac2e(BlockBreakEvent event) {
+    public void onBlockBreak(BlockBreakEvent event) {
         var player = event.getPlayer();
         if (event.getBlock().getType() != Material.END_PORTAL_FRAME) {
             return;
@@ -62,6 +76,16 @@ public class BlockPlaceListener implements Listener {
                 }
                 if (entity.getCustomName().equalsIgnoreCase(Utils.fixColor("&c• Runiczny Piedestał"))) {
                     entity.remove();
+                    var playerUUID = player.getUniqueId();
+                    var pX = block.getX();
+                    var pY = block.getY();
+                    var pZ = block.getZ();
+
+                    var runic = RunicPedestalManager.runic;
+
+                    runic.set(playerUUID + ".pedestal-X" + pX + "Y" + pY + "Z" + pZ, null);
+
+                    RunicPedestalManager.saveConfig();
                 }
             }
         }
