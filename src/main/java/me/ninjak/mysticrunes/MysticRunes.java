@@ -4,10 +4,7 @@ import me.ninjak.mysticrunes.Commands.Administrator.MRunesCommand;
 import me.ninjak.mysticrunes.Events.BlockPlaceListener;
 import me.ninjak.mysticrunes.Events.InventoryClickListener;
 import me.ninjak.mysticrunes.Events.PlayerInteractListener;
-import me.ninjak.mysticrunes.FilesManager.ConfigManager;
-import me.ninjak.mysticrunes.FilesManager.ConsoleMessage;
-import me.ninjak.mysticrunes.FilesManager.LanguageManager;
-import me.ninjak.mysticrunes.FilesManager.RunesManager;
+import me.ninjak.mysticrunes.FilesManager.*;
 import me.ninjak.mysticrunes.GUI.ItemsOnGui.GlassList;
 import me.ninjak.mysticrunes.GUI.ItemsOnGui.ToolsList;
 import me.ninjak.mysticrunes.MobsItem.LoadMobsDrop;
@@ -54,6 +51,8 @@ public final class MysticRunes extends JavaPlugin {
     }
 
     private static void setupFiles() {
+        RunicPedestalManager.setup();
+        RunicPedestalManager.saveConfig();
         ConsoleMessage.enableMessage();
         ConfigManager.setup();
         ConfigManager.saveConfig();

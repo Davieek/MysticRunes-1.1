@@ -19,7 +19,7 @@ public class RunesAnvil {
     public static void loadAnvilItem() {
         var item = new ItemStack(Material.END_PORTAL_FRAME);
         var meta = item.getItemMeta();
-        meta.setDisplayName(Utils.fixColor("&d• Runiczny Piedestał"));
+        meta.setDisplayName(Utils.fixColor("&c• Runiczny Piedestał"));
         ArrayList<String> lore = new ArrayList<>();
         lore.add(Utils.fixColor("&7Daje możliwość łączenia run z itemami."));
         lore.add(Utils.fixColor(""));

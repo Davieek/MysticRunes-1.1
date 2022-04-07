@@ -1,5 +1,6 @@
 package me.ninjak.mysticrunes.Events;
 
+import jdk.jshell.execution.Util;
 import me.ninjak.mysticrunes.Items.RunesAnvil.RunesAnvil;
 import me.ninjak.mysticrunes.Utils.Utils;
 import org.bukkit.Bukkit;
@@ -56,7 +57,12 @@ public class BlockPlaceListener implements Listener {
                 if (entity.getType() == EntityType.PLAYER) {
                     return;
                 }
-                entity.remove();
+                if (entity.getCustomName() == null) {
+                    return;
+                }
+                if (entity.getCustomName().equalsIgnoreCase(Utils.fixColor("&c• Runiczny Piedestał"))) {
+                    entity.remove();
+                }
             }
         }
     }
